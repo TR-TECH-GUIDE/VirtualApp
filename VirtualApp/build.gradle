@@ -28,12 +28,6 @@ allprojects {
             url 'https://maven.google.com/'
             name 'Google'
         }
-        maven {
-            url 'http://maven.xdja.com:8081/nexus3/repository/public/'
-        }
-        maven {
-            url 'http://maven.xdja.com:8081/nexus3/repository/xdja/'
-        }
     }
 }
 
