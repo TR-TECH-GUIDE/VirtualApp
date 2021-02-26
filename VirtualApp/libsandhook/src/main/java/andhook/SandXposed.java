@@ -39,9 +39,12 @@ public class SandXposed {
         HookLog.DEBUG = debug;
         SandHookConfig.SDK_INT = isQ() ? 29 : Build.VERSION.SDK_INT;
         SandHookConfig.compiler = SandHookConfig.SDK_INT < Build.VERSION_CODES.O;
+		// Should not use delay hook
+		/*
         if (PendingHookHandler.canWork()) {
             Log.e("SandHook", "Pending Hook Mode!");
         }
+		*/
         SandHook.disableVMInline();
         XposedCompat.cacheDir = new File(cacheDir, "sandhook_cache_general");
     }
