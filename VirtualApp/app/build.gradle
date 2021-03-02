@@ -3,7 +3,7 @@ apply plugin: 'com.android.application'
 
 android {
 
-    compileSdkVersion 26
+    compileSdkVersion 29
     defaultConfig {
         applicationId rootProject.ext.PACKAGE_NAME_32BIT
         minSdkVersion 19
