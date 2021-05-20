@@ -267,9 +267,10 @@ public class VActivityManagerService extends IActivityManager.Stub {
             boolean foreground = false;
             while (N-- > 0) {
                 ProcessRecord r = mPidsSelfLocked.get(N);
-                foreground|=r.client.isAppForeground();
+				if(r.client != null)
+                    foreground|=r.client.isAppForeground();
             }
-            Log.e(TAG, " process is foreground " + foreground);
+            //Log.e(TAG, " process is foreground " + foreground);
             return foreground;
         }
     }
@@ -795,7 +796,7 @@ public class VActivityManagerService extends IActivityManager.Stub {
                         if (r.pkgList.contains(pkg) || r.info.packageName.equals(pkg)) {
                             //xdja
                             try {
-                                Log.e("wxd", " killAppByPkg  " + r.processName + r.pkgList.toString());
+                                //Log.e("wxd", " killAppByPkg  " + r.processName + r.pkgList.toString());
                                 //processDied处有做处理
                                 //mServices.stopServiceByPkg(userId, pkg);
                                 r.client.clearSettingProvider();
