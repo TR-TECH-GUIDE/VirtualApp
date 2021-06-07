@@ -17,6 +17,7 @@ extern jclass vskmClass;
 extern jclass vsckmsClass;
 
 int SafeKeyJni::encryptKey(char *input, int inputlen, char *output, int outputlen){
+	return 0;
     return operatorKey(input, inputlen, output, outputlen, 0);
    /* for(int i = 0; i < inputlen; i++)
         output[i] = input[i] + (char)3;
@@ -25,6 +26,7 @@ int SafeKeyJni::encryptKey(char *input, int inputlen, char *output, int outputle
 }
 
 int SafeKeyJni::decryptKey(char *input, int inputlen, char *output, int outputlen){
+	return 0;
     return operatorKey(input, inputlen, output, outputlen, 1);
    /* for(int i = 0; i < inputlen; i++)
         output[i] = input[i] - (char)3;
@@ -33,6 +35,7 @@ int SafeKeyJni::decryptKey(char *input, int inputlen, char *output, int outputle
 }
 
 int SafeKeyJni::operatorKey(char *input, int inputlen, char *output, int outputlen, int mode) {
+	return 0;
 
     log("SafeKeyJni operatorKey start mode %d keylen %d", mode, inputlen);
     int ret = 0;
@@ -138,6 +141,7 @@ char *SafeKeyJni::ckmsdecryptKey(char *input, int inputlen, uint32_t &outputlen)
 
 char *SafeKeyJni::ckmsoperatorKey(char *input, int inputlen, uint32_t &outputlen,
                                   int mode) {
+        return nullptr;
     zJNIEnv env;
     if (env.get() == NULL) {
         log("JNIEnv is NULL");
