@@ -113,7 +113,7 @@ namespace SandHook {
             uint32_t accessFlag = getIntFromJava(jniEnv, "com/swift/sandhook/SandHook",
                                                  "testAccessFlag");
             if (accessFlag == 0) {
-                accessFlag = 524313;
+                accessFlag |= 0x80019;
                 //kAccPublicApi
                 if (SDK_INT >= ANDROID_Q) {
                     accessFlag |= 0x10000000;
