@@ -30,6 +30,11 @@ public class SandXposed {
     private static boolean isQ() {
         return Build.VERSION.SDK_INT > 28 || (Build.VERSION.SDK_INT == 28 && getPreviewSDKInt() > 0);
     }
+	
+	private static int getCurrentSdkVer()
+	{
+		return getPreviewSDKInt() > 0 ? (Build.VERSION.SDK_INT + 1) : Build.VERSION.SDK_INT;
+	}
 
     /**
      * 在Application，Va的App进程的初始化调用，onVirtualProcess
@@ -37,7 +42,7 @@ public class SandXposed {
     public static void init(boolean debug, File cacheDir) {
         SandHookConfig.DEBUG = debug;
         HookLog.DEBUG = debug;
-        SandHookConfig.SDK_INT = isQ() ? 29 : Build.VERSION.SDK_INT;
+        SandHookConfig.SDK_INT = getCurrentSdkVer();
         SandHookConfig.compiler = SandHookConfig.SDK_INT < Build.VERSION_CODES.O;
 		// Should not use delay hook
 		/*
