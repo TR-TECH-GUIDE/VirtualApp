@@ -449,17 +449,18 @@ public final class VClient extends IVClient.Stub {
 
         fixForEmui10();
 
+        Object mainThread = VirtualCore.mainThread();
+		
         if (getConfig().isEnableIORedirect()) {
             if (VirtualCore.get().isIORelocateWork()) {
                 startIORelocater(info, isSubRemote);
+                NativeEngine.launchEngine();
+                NativeEngine.startDexOverride();
             } else {
                 VLog.w(TAG, "IO Relocate verify fail.");
             }
         }
-        NativeEngine.launchEngine();
         mEnvironmentPrepared = true;
-        Object mainThread = VirtualCore.mainThread();
-        NativeEngine.startDexOverride();
         initDataStorage(isSubRemote, userId, packageName);
         Context context = createPackageContext(data.appInfo);
         File codeCacheDir;
