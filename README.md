@@ -1,35 +1,31 @@
-## VirtualApp 工程
+## VirtualApp Project
 
-全新体验，多种优化
+New experience, multiple optimizations
 
-### 特性
+### Features
 
-高性能、高稳定性、修复构建错误等等
+High performance, high stability, repair build errors, etc.
 ```
-本内核仅供开发人员参考，请勿构建成品并发表到任何地方
-仅供自行测试使用
-如有修改建议欢迎提交PR
-本项目为商业版开源，修改可看commit
-开源网站太多使用旧版泄露版商业版或者垃圾版本冒充商业版
-不仅不完善，还有一堆问题。
-本项目用于清理过时的外售技术，促进开源社区发展
+This kernel is for developers' reference only, please do not build the finished product and publish it anywhere
+For self-test use only
+If you have any suggestions for modification, please submit a PR
+This project is open source for commercial version, please refer to commit for modification
+Too many open source websites use the old leaked commercial version or the junk version to pretend to be the commercial version
+Not only is it imperfect, there are also a bunch of problems.
+This project is used to clean up outdated external sales technology and promote the development of open source communities
 ```
 ------
-注意，源代码需要遵循GPLv3协议进行开源
-请使用本工程的项目注明出处
-------
-联系方式：1@die.lu
+Note that the source code needs to follow the GPLv3 agreement for open source
+Please use the items of this project to indicate the source
 
 ------
 QQ 384550791，3068083845，2737996094
 
 ------
 
-蝙蝠BAT 2739976
-------
-网站：http://www.die.lu/
+BAT 2739976
 ---------------
 ```
-构建方式：
+Construction method:
 gradle build
 ```
