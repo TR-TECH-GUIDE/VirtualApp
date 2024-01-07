@@ -1,7 +1,7 @@
 package com.lody.virtual.server.interfaces;
 
 import android.os.ParcelFileDescriptor;
-import android.os.RemoteException;
+
 
 import com.lody.virtual.remote.InstallResult;
 import com.lody.virtual.remote.InstalledAppInfo;

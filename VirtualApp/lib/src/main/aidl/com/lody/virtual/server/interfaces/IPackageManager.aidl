@@ -11,7 +11,7 @@ import android.content.pm.ProviderInfo;
 import android.content.pm.ResolveInfo;
 import android.content.pm.ServiceInfo;
 import android.os.IBinder;
-import android.os.RemoteException;
+
 
 import com.lody.virtual.remote.VParceledListSlice;
 import com.lody.virtual.remote.ReceiverInfo;

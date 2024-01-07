@@ -8,7 +8,7 @@ import android.content.pm.ActivityInfo;
 import android.content.pm.ProviderInfo;
 import android.os.Bundle;
 import android.os.IBinder;
-import android.os.RemoteException;
+
 import com.lody.virtual.remote.ClientConfig;
 
 import com.lody.virtual.remote.AppRunningProcessInfo;

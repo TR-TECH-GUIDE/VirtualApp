@@ -1,7 +1,7 @@
 package com.lody.virtual.server.interfaces;
 
 import android.graphics.Bitmap;
-import android.os.RemoteException;
+
 
 import com.lody.virtual.os.VUserInfo;
 

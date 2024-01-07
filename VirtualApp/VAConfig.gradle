@@ -1,8 +1,14 @@
 ext {
+
+    buildToolsVersion = "33.0.0"
+    minSdk = 21
+    compileSdk = 34
+    targetSdk = 34
+
     if (project.hasProperty('appid')) {
         PACKAGE_NAME_32BIT = appid
     } else {
-        PACKAGE_NAME_32BIT = 'io.busniess.va'
+        PACKAGE_NAME_32BIT = 'io.virtualapp.va'
     }
 
     PACKAGE_NAME_ARM64 = 'io.virtualapp.addon.arm64'
@@ -11,4 +17,33 @@ ext {
 
     VERSION = '3.3.0'
     VERSION_CODE = 180080914
+    cmakeVersion = '3.22.1'
+    abiFilters = "arm64-v8a"//"armeabi-v7a,arm64-v8a,x86_64"
+    useASAN = false
+    javaVersion = JavaVersion.VERSION_1_8
+
+
+    //app ui
+    kotlin_version = "1.7.0"
+
+    appcompatVersion = "1.4.2"
+    lifecycleVersion = "2.5.0"
+    coroutinesVersion = "1.5.2"
+    roomVersion = "2.4.3"
+    materialDialogVersion = "3.3.0"
+    fastAdapterVersion = "5.6.0"
+
+    RxJavaVersion = '1.3.4'
+    RxAndroidVersion = '1.2.1'
+    retrofitVersion = '2.9.0'
+    retrofitAdapterVersion = '2.9.0'
+    retrofitConverterVersion = '2.9.0'
+    okhttp3 = '4.9.2'
+    immersionbarVersion = "3.2.2"
+
+    blackReflection = '1.1.4'
+    mmkv = '1.2.10'
+
+    xCrash = '3.1.0'
+    hiddenApiBypass = '4.3'
 }

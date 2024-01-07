@@ -5,7 +5,7 @@
 
 #include <cstring>
 #include <utils/mylog.h>
-#include <stdlib.h>
+//#include <stdlib.h>
 #include <utils/zString.h>
 #include <linux/time.h>
 #include <time.h>
@@ -165,7 +165,7 @@ char *SafeKeyJni::ckmsoperatorKey(char *input, int inputlen, uint32_t &outputlen
     }
     jbyte *out = env.get()->GetByteArrayElements(_output, JNI_FALSE);
     outputlen = static_cast<uint32_t>(env.get()->GetArrayLength(_output));
-    char *temp = (char *) malloc(outputlen);
+    char *temp = new char[outputlen];
     if (temp == NULL) {
         return NULL;
     }

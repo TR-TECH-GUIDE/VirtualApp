@@ -1,2 +1,48 @@
-include ':lib', ':app'
-//, ':libsandhook'
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+        jcenter()
+        maven {
+            url 'https://jitpack.io'
+        }
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        jcenter()
+        maven {
+            url "https://jitpack.io"
+        }
+        maven { url 'https://dl.google.com/dl/android/maven2' }
+        maven {
+            url 'https://maven.google.com/'
+            name 'Google'
+        }
+         maven {
+             allowInsecureProtocol = true
+             url 'http://maven.xdja.com:8081/nexus3/repository/public/'
+         }
+         maven {
+             allowInsecureProtocol = true
+             url 'http://maven.xdja.com:8081/nexus3/repository/xdja/'
+         }
+
+        maven{
+            allowInsecureProtocol = true
+            url'http://maven.aliyun.com/nexus/content/groups/public/'
+            name '阿里云'
+        }
+    }
+}
+
+rootProject.name = "VirtualApp"
+include ':app'
+include ':lib'
+include ':Module:ui'
+//include ':Module:va_ui'
+include':Module:shadowhook'
+include':Module:xposed'
+include ':Module:xcrash_lib'

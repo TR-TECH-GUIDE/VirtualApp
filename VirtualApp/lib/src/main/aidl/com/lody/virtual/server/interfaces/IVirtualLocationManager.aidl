@@ -1,6 +1,6 @@
 package com.lody.virtual.server.interfaces;
 
-import android.os.RemoteException;
+
 
 import com.lody.virtual.remote.vloc.VCell;
 import com.lody.virtual.remote.vloc.VLocation;

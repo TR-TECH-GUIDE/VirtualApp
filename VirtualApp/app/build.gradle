@@ -77,9 +77,9 @@ dependencies {
     implementation 'org.jdeferred:jdeferred-android-aar:1.2.4'
     // ThirdParty
     implementation 'com.jonathanfinerty.once:once:1.0.3'
-    //implementation 'com.xdja.safekeyservice:xdjacrypto:1.0.3'
-    //implementation 'com.xdja.safekeyservice:jar_multi_jniapi:3.9.50'
-    //implementation 'com.xdja.safekeyservice:jar_multi_unitepin:3.9.24'
+    implementation 'com.xdja.safekeyservice:xdjacrypto:1.0.3'
+    implementation 'com.xdja.safekeyservice:jar_multi_jniapi:3.9.50'
+    implementation 'com.xdja.safekeyservice:jar_multi_unitepin:3.9.24'
     implementation files('libs/securitysdk-v2--standard-4.0.12.2477.jar')
     implementation 'com.google.code.gson:gson:2.6.2'
 }
